@@ -1,0 +1,8 @@
+{
+  "name": "CTE Control - Asistente Técnico",
+  "description": "Una herramienta profesional para arquitectos e ingenieros que facilita la aplicación y justificación del Código Técnico de la Edificación (CTE). Permite definir proyectos, evaluar qué documentos básicos aplican y generar borradores de memorias asistidos por IA.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
