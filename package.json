@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@google/genai": "^1.35.0",
+    "@vitejs/plugin-react-swc": "^4.2.2",
+    "clsx": "^2.1.1",
+    "lovable-tagger": "^1.1.13",
+    "lucide-react": "^0.475.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "@google/genai": "^1.35.0",
     "react-router-dom": "^7.12.0",
-    "lucide-react": "^0.475.0",
-    "clsx": "^2.1.1",
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
