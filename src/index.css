@@ -2,104 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Veruspro Design System - Spanish Building Code Compliance
-   Colors: Deep navy (trust/authority), terracotta (Spanish warmth), clean whites
-   All colors MUST be HSL.
-*/
+/* VerusPro Design System - Professional Architecture Compliance Platform */
 
 @layer base {
   :root {
-    /* Core palette - Professional navy with Mediterranean warmth */
+    /* Core brand colors - Deep blue professional palette */
     --background: 210 20% 98%;
-    --foreground: 220 30% 15%;
+    --foreground: 215 30% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 15%;
+    --card-foreground: 215 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 15%;
+    --popover-foreground: 215 30% 15%;
 
-    /* Primary - Deep authoritative navy */
-    --primary: 220 60% 20%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary - Deep architectural blue */
+    --primary: 215 65% 20%;
+    --primary-foreground: 210 40% 98%;
 
-    /* Secondary - Soft slate */
-    --secondary: 215 20% 94%;
-    --secondary-foreground: 220 30% 20%;
+    /* Secondary - Warm concrete gray */
+    --secondary: 210 15% 94%;
+    --secondary-foreground: 215 30% 20%;
 
-    /* Muted tones */
-    --muted: 215 15% 92%;
+    --muted: 210 15% 92%;
     --muted-foreground: 215 15% 45%;
 
-    /* Accent - Warm terracotta/amber for Spanish warmth */
-    --accent: 25 85% 55%;
+    /* Accent - Vibrant teal for CTAs */
+    --accent: 174 72% 40%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 72% 50%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 20% 88%;
-    --input: 215 20% 88%;
-    --ring: 220 60% 20%;
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 215 65% 20%;
 
-    --radius: 0.625rem;
+    --radius: 0.75rem;
 
     /* Sidebar */
-    --sidebar-background: 220 30% 15%;
-    --sidebar-foreground: 210 20% 95%;
-    --sidebar-primary: 25 85% 55%;
+    --sidebar-background: 215 65% 18%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 174 72% 40%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 25% 22%;
-    --sidebar-accent-foreground: 210 20% 95%;
-    --sidebar-border: 220 25% 25%;
-    --sidebar-ring: 25 85% 55%;
+    --sidebar-accent: 215 50% 25%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 50% 25%;
+    --sidebar-ring: 174 72% 40%;
 
-    /* Custom Veruspro tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(220 60% 20%) 0%, hsl(220 50% 30%) 50%, hsl(220 40% 35%) 100%);
-    --accent-gradient: linear-gradient(135deg, hsl(25 85% 55%) 0%, hsl(30 80% 50%) 100%);
-    --glass: 0 0% 100% / 0.8;
-    --shadow-soft: 0 4px 20px -4px hsl(220 30% 15% / 0.1);
-    --shadow-elevated: 0 12px 40px -8px hsl(220 30% 15% / 0.15);
-    --shadow-glow: 0 0 40px hsl(25 85% 55% / 0.3);
+    /* Custom gradients and shadows as CSS variables */
+    --gradient-hero: linear-gradient(135deg, hsl(215, 65%, 18%) 0%, hsl(215, 55%, 28%) 50%, hsl(210, 45%, 35%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(174, 72%, 40%) 0%, hsl(174, 65%, 50%) 100%);
+    --shadow-soft: 0 4px 20px -4px hsl(215 30% 15% / 0.08);
+    --shadow-elevated: 0 12px 40px -8px hsl(215 30% 15% / 0.15);
+    --shadow-glow: 0 8px 30px -4px hsl(174 72% 40% / 0.35);
   }
 
   .dark {
-    --background: 220 30% 8%;
-    --foreground: 210 20% 95%;
+    --background: 215 30% 8%;
+    --foreground: 210 40% 95%;
 
-    --card: 220 30% 12%;
-    --card-foreground: 210 20% 95%;
+    --card: 215 30% 12%;
+    --card-foreground: 210 40% 95%;
 
-    --popover: 220 30% 12%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 215 30% 12%;
+    --popover-foreground: 210 40% 95%;
 
-    --primary: 25 85% 55%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 210 40% 95%;
+    --primary-foreground: 215 65% 18%;
 
-    --secondary: 220 25% 18%;
-    --secondary-foreground: 210 20% 95%;
+    --secondary: 215 30% 18%;
+    --secondary-foreground: 210 40% 95%;
 
-    --muted: 220 25% 15%;
+    --muted: 215 30% 18%;
     --muted-foreground: 215 15% 60%;
 
-    --accent: 25 85% 55%;
+    --accent: 174 72% 45%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 72% 45%;
+    --destructive: 0 62% 40%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 25% 20%;
-    --input: 220 25% 20%;
-    --ring: 25 85% 55%;
+    --border: 215 30% 20%;
+    --input: 215 30% 20%;
+    --ring: 174 72% 45%;
 
-    --sidebar-background: 220 30% 6%;
-    --sidebar-foreground: 210 20% 95%;
-    --sidebar-primary: 25 85% 55%;
+    --sidebar-background: 215 30% 6%;
+    --sidebar-foreground: 210 40% 95%;
+    --sidebar-primary: 174 72% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 25% 15%;
-    --sidebar-accent-foreground: 210 20% 95%;
-    --sidebar-border: 220 25% 15%;
-    --sidebar-ring: 25 85% 55%;
+    --sidebar-accent: 215 30% 15%;
+    --sidebar-accent-foreground: 210 40% 95%;
+    --sidebar-border: 215 30% 15%;
+    --sidebar-ring: 174 72% 45%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(215, 30%, 8%) 0%, hsl(215, 35%, 15%) 50%, hsl(210, 30%, 20%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(174, 72%, 45%) 0%, hsl(174, 65%, 55%) 100%);
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 12px 40px -8px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 8px 30px -4px hsl(174 72% 45% / 0.4);
   }
 }
 
@@ -112,26 +113,31 @@
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-heading tracking-tight;
-  }
 }
 
 @layer utilities {
+  /* Glass morphism effect */
+  .glass {
+    @apply bg-background/80 backdrop-blur-lg;
+  }
+
+  /* Hero gradient background */
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Accent gradient for buttons */
+  .bg-accent-gradient {
+    background: var(--gradient-accent);
+  }
+
+  /* Text gradient */
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: var(--accent-gradient);
+    background: var(--gradient-accent);
   }
 
-  .bg-hero-gradient {
-    background: var(--hero-gradient);
-  }
-
-  .bg-accent-gradient {
-    background: var(--accent-gradient);
-  }
-
+  /* Shadow utilities */
   .shadow-soft {
     box-shadow: var(--shadow-soft);
   }
@@ -144,20 +150,48 @@
     box-shadow: var(--shadow-glow);
   }
 
-  .glass {
-    background: hsl(var(--glass));
-    backdrop-filter: blur(12px);
-  }
-
+  /* Geometric pattern overlay */
   .geometric-pattern {
     background-image: 
-      linear-gradient(30deg, hsl(220 60% 20% / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(220 60% 20% / 0.03) 87.5%, hsl(220 60% 20% / 0.03)),
-      linear-gradient(150deg, hsl(220 60% 20% / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(220 60% 20% / 0.03) 87.5%, hsl(220 60% 20% / 0.03)),
-      linear-gradient(30deg, hsl(220 60% 20% / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(220 60% 20% / 0.03) 87.5%, hsl(220 60% 20% / 0.03)),
-      linear-gradient(150deg, hsl(220 60% 20% / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(220 60% 20% / 0.03) 87.5%, hsl(220 60% 20% / 0.03)),
-      linear-gradient(60deg, hsl(25 85% 55% / 0.05) 25%, transparent 25.5%, transparent 75%, hsl(25 85% 55% / 0.05) 75%, hsl(25 85% 55% / 0.05)),
-      linear-gradient(60deg, hsl(25 85% 55% / 0.05) 25%, transparent 25.5%, transparent 75%, hsl(25 85% 55% / 0.05) 75%, hsl(25 85% 55% / 0.05));
+      linear-gradient(30deg, hsl(var(--primary) / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.03) 87.5%, hsl(var(--primary) / 0.03)),
+      linear-gradient(150deg, hsl(var(--primary) / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.03) 87.5%, hsl(var(--primary) / 0.03)),
+      linear-gradient(30deg, hsl(var(--primary) / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.03) 87.5%, hsl(var(--primary) / 0.03)),
+      linear-gradient(150deg, hsl(var(--primary) / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.03) 87.5%, hsl(var(--primary) / 0.03)),
+      linear-gradient(60deg, hsl(var(--accent) / 0.04) 25%, transparent 25.5%, transparent 75%, hsl(var(--accent) / 0.04) 75%, hsl(var(--accent) / 0.04)),
+      linear-gradient(60deg, hsl(var(--accent) / 0.04) 25%, transparent 25.5%, transparent 75%, hsl(var(--accent) / 0.04) 75%, hsl(var(--accent) / 0.04));
     background-size: 80px 140px;
     background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  }
+}
+
+/* Custom animations */
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
