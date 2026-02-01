@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* VerusPro Design System - Professional Architecture Compliance Platform */
 
@@ -102,96 +100,91 @@
     --shadow-elevated: 0 12px 40px -8px hsl(0 0% 0% / 0.5);
     --shadow-glow: 0 8px 30px -4px hsl(174 72% 45% / 0.4);
   }
-}
 
-@layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
-@layer utilities {
-  /* Glass morphism effect */
-  .glass {
-    @apply bg-background/80 backdrop-blur-lg;
-  }
+/* Custom utility classes */
+.glass {
+  background-color: hsl(var(--background) / 0.8);
+  backdrop-filter: blur(16px);
+}
 
-  /* Hero gradient background */
-  .bg-hero-gradient {
-    background: var(--gradient-hero);
-  }
+.bg-hero-gradient {
+  background: var(--gradient-hero);
+}
 
-  /* Accent gradient for buttons */
-  .bg-accent-gradient {
-    background: var(--gradient-accent);
-  }
+.bg-accent-gradient {
+  background: var(--gradient-accent);
+}
 
-  /* Text gradient */
-  .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background: var(--gradient-accent);
-  }
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: var(--gradient-accent);
+}
 
-  /* Shadow utilities */
-  .shadow-soft {
-    box-shadow: var(--shadow-soft);
-  }
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
 
-  .shadow-elevated {
-    box-shadow: var(--shadow-elevated);
-  }
+.shadow-elevated {
+  box-shadow: var(--shadow-elevated);
+}
 
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
-  }
+.shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
 
-  /* Geometric pattern overlay */
-  .geometric-pattern {
-    background-image: 
-      linear-gradient(30deg, hsl(var(--primary) / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.03) 87.5%, hsl(var(--primary) / 0.03)),
-      linear-gradient(150deg, hsl(var(--primary) / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.03) 87.5%, hsl(var(--primary) / 0.03)),
-      linear-gradient(30deg, hsl(var(--primary) / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.03) 87.5%, hsl(var(--primary) / 0.03)),
-      linear-gradient(150deg, hsl(var(--primary) / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.03) 87.5%, hsl(var(--primary) / 0.03)),
-      linear-gradient(60deg, hsl(var(--accent) / 0.04) 25%, transparent 25.5%, transparent 75%, hsl(var(--accent) / 0.04) 75%, hsl(var(--accent) / 0.04)),
-      linear-gradient(60deg, hsl(var(--accent) / 0.04) 25%, transparent 25.5%, transparent 75%, hsl(var(--accent) / 0.04) 75%, hsl(var(--accent) / 0.04));
-    background-size: 80px 140px;
-    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
-  }
+.geometric-pattern {
+  background-image: 
+    linear-gradient(30deg, hsl(var(--primary) / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.03) 87.5%, hsl(var(--primary) / 0.03)),
+    linear-gradient(150deg, hsl(var(--primary) / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.03) 87.5%, hsl(var(--primary) / 0.03)),
+    linear-gradient(30deg, hsl(var(--primary) / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.03) 87.5%, hsl(var(--primary) / 0.03)),
+    linear-gradient(150deg, hsl(var(--primary) / 0.03) 12%, transparent 12.5%, transparent 87%, hsl(var(--primary) / 0.03) 87.5%, hsl(var(--primary) / 0.03)),
+    linear-gradient(60deg, hsl(var(--accent) / 0.04) 25%, transparent 25.5%, transparent 75%, hsl(var(--accent) / 0.04) 75%, hsl(var(--accent) / 0.04)),
+    linear-gradient(60deg, hsl(var(--accent) / 0.04) 25%, transparent 25.5%, transparent 75%, hsl(var(--accent) / 0.04) 75%, hsl(var(--accent) / 0.04));
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
 }
 
 /* Custom animations */
-@layer utilities {
-  .animate-fade-up {
-    animation: fadeUp 0.6s ease-out forwards;
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
     opacity: 0;
   }
-
-  .animate-fade-in {
-    animation: fadeIn 0.4s ease-out forwards;
-  }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
 }
